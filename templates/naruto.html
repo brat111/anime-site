@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Naruto - Anime BG</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">Anime BG</div>
+
+    <nav>
+        <a href="/">Начало</a>
+        <a href="/#anime">Анимета</a>
+        <a href="/#genres">Жанрове</a>
+    </nav>
+
+</header>
+
+<main class="episodes-page">
+
+ <h1>Naruto — Епизод {{ episode }}</h1>
+
+    <p>Избери епизод:</p>
+
+<div class="episodes-list">
+
+    <a href="/naruto/episode/1" class="episode-button">
+        ▶ Епизод 1
+    </a>
+
+    <a href="/naruto/episode/2" class="episode-button">
+        ▶ Епизод 2
+    </a>
+
+    <a href="/naruto/episode/3" class="episode-button">
+        ▶ Епизод 3
+    </a>
+
+    <a href="/naruto/episode/4" class="episode-button">
+        ▶ Епизод 4
+    </a>
+
+    <a href="/naruto/episode/5" class="episode-button">
+        ▶ Епизод 5
+    </a>
+
+</div>
+
+</main>
+
+</body>
+</html>

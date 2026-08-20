@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Любими - Anime BG</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Anime BG</div>
+
+    <nav>
+        <a href="/">Начало</a>
+        <a href="/favorites">Любими</a>
+    </nav>
+</header>
+
+<main class="anime-section">
+
+    <h2>Моите любими ❤️</h2>
+
+    <div id="favoritesGrid" class="anime-grid"></div>
+
+    <p id="emptyMessage">
+        Все още нямаш добавени любими анимета.
+    </p>
+
+</main>
+
+<script>
+
+const animeList = [
+    {
+        name: "Naruto",
+        genre: "Action • Adventure"
+    },
+    {
+        name: "One Piece",
+        genre: "Action • Adventure"
+    },
+    {
+        name: "Demon Slayer",
+        genre: "Action • Fantasy"
+    },
+    {
+        name: "Jujutsu Kaisen",
+        genre: "Action • Fantasy"
+    },
+    {
+        name: "Spy x Family",
+        genre: "Comedy • Family"
+    },
+    {
+        name: "Your Name",
+        genre: "Romance • Fantasy"
+    }
+];
+
+const grid = document.getElementById("favoritesGrid");
+const emptyMessage = document.getElementById("emptyMessage");
+
+let found = false;
+
+animeList.forEach(anime => {
+
+    const key = "favorite_" + anime.name;
+
+    if (localStorage.getItem(key) === "true") {
+
+        found = true;
+
+        const card = document.createElement("div");
+
+        card.className = "anime-card";
+
+        card.innerHTML = `
+            <div class="anime-image">
+                ${anime.name}
+            </div>
+
+            <div class="anime-info">
+                <h3>${anime.name}</h3>
+                <p>${anime.genre}</p>
+
+                <button onclick="removeFavorite('${anime.name}')">
+                    Премахни
+                </button>
+            </div>
+        `;
+
+        grid.appendChild(card);
+    }
+
+});
+
+if (found) {
+    emptyMessage.style.display = "none";
+}
+
+function removeFavorite(name) {
+
+    localStorage.removeItem("favorite_" + name);
+
+    location.reload();
+}
+
+</script>
+
+</body>
+</html>

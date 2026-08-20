@@ -1,0 +1,240 @@
+```html id="l0n8zk"
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime BG</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Anime BG
+    </div>
+
+    <nav>
+        <a href="/">Начало</a>
+        <a href="#anime">Анимета</a>
+        <a href="#genres">Жанрове</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div>
+
+        <div class="small-title">
+            ANIME STREAMING
+        </div>
+
+        <h1>Anime BG</h1>
+
+        <p>
+            Гледай любимите си анимета.
+        </p>
+
+        <a href="#anime" class="hero-button">
+            Разгледай аниметата
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="search-section">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Търси аниме..."
+    >
+
+</section>
+
+
+<section class="genres" id="genres">
+
+    <button>Всички</button>
+    <button>Action</button>
+    <button>Adventure</button>
+    <button>Fantasy</button>
+    <button>Comedy</button>
+    <button>Romance</button>
+
+</section>
+
+
+<main class="anime-section" id="anime">
+
+    <h2>Популярни анимета</h2>
+
+    <div class="anime-grid">
+
+
+        <!-- NARUTO -->
+
+        <a href="/naruto" class="anime-card anime-link">
+
+            <div class="anime-image">
+
+                <img
+                    src="{{ url_for('static', filename='images/naruto.png') }}"
+                    alt="Naruto"
+                >
+
+            </div>
+
+            <div class="anime-info">
+
+                <h3>Naruto</h3>
+
+                <p>
+                    Action • Adventure
+                </p>
+
+                <span class="watch-button">
+                    ▶ Епизоди
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- ONE PIECE -->
+
+        <div class="anime-card">
+
+            <div class="anime-image">
+                ONE PIECE
+            </div>
+
+            <div class="anime-info">
+
+                <h3>One Piece</h3>
+
+                <p>Action • Adventure</p>
+
+                <span class="watch-button">
+                    Скоро
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- DEMON SLAYER -->
+
+        <div class="anime-card">
+
+            <div class="anime-image">
+                DEMON SLAYER
+            </div>
+
+            <div class="anime-info">
+
+                <h3>Demon Slayer</h3>
+
+                <p>Action • Fantasy</p>
+
+                <span class="watch-button">
+                    Скоро
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- JUJUTSU KAISEN -->
+
+        <div class="anime-card">
+
+            <div class="anime-image">
+                JUJUTSU KAISEN
+            </div>
+
+            <div class="anime-info">
+
+                <h3>Jujutsu Kaisen</h3>
+
+                <p>Action • Fantasy</p>
+
+                <span class="watch-button">
+                    Скоро
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SPY X FAMILY -->
+
+        <div class="anime-card">
+
+            <div class="anime-image">
+                SPY X FAMILY
+            </div>
+
+            <div class="anime-info">
+
+                <h3>Spy x Family</h3>
+
+                <p>Comedy • Family</p>
+
+                <span class="watch-button">
+                    Скоро
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- YOUR NAME -->
+
+        <div class="anime-card">
+
+            <div class="anime-image">
+                YOUR NAME
+            </div>
+
+            <div class="anime-info">
+
+                <h3>Your Name</h3>
+
+                <p>Romance • Fantasy</p>
+
+                <span class="watch-button">
+                    Скоро
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+<footer>
+    Anime BG © 2026
+</footer>
+
+</body>
+</html>
+```

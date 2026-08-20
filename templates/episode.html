@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Naruto - Епизод {{ episode }}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Anime BG</div>
+
+    <nav>
+        <a href="/">Начало</a>
+        <a href="/naruto">Naruto</a>
+    </nav>
+</header>
+
+<main class="player-page">
+
+    <h1>Naruto — Епизод {{ episode }}</h1>
+
+    <video class="anime-player" controls>
+        <source
+            src="{{ url_for('static', filename='videos/naruto' ~ episode ~ '.mp4') }}"
+            type="video/mp4">
+    </video>
+
+    <a href="/naruto" class="back-button">
+        ← Назад към епизодите
+    </a>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #080810;
+    color: white;
+}
+
+/* HEADER */
+
+header {
+    height: 80px;
+    padding: 0 40px;
+    background: #141420;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: #9b6cff;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 420px;
+    padding: 80px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle, #35206b, #080810 70%);
+}
+
+.small-title {
+    color: #a78bfa;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    margin: 10px 0;
+    font-size: 64px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #ccc;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 25px;
+    background: #7c3aed;
+    color: white;
+    text-decoration: none;
+    border-radius: 9px;
+}
+
+.hero-button:hover {
+    background: #8b5cf6;
+}
+
+/* SEARCH */
+
+.search-section {
+    padding: 35px 20px 15px;
+    text-align: center;
+}
+
+#search {
+    width: 600px;
+    max-width: 90%;
+    padding: 16px 20px;
+    background: #151522;
+    color: white;
+    border: 1px solid #35354d;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+/* GENRES */
+
+.genres {
+    padding: 15px 20px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.genres button {
+    padding: 11px 20px;
+    border: 1px solid #35354d;
+    border-radius: 20px;
+    background: #151522;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.genres button:hover {
+    background: #7c3aed;
+}
+
+/* ANIME GRID */
+
+.anime-section {
+    padding: 20px 6% 80px;
+}
+
+.anime-section h2 {
+    margin-bottom: 30px;
+    font-size: 34px;
+}
+
+/* ТОВА ПРАВИ КАРТИТЕ В РЕДОВЕ */
+
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* CARD */
+
+.anime-card {
+    overflow: hidden;
+    background: #141420;
+    border: 1px solid #29293b;
+    border-radius: 12px;
+    transition: 0.25s;
+}
+
+.anime-card:hover {
+    transform: translateY(-7px);
+    border-color: #7c3aed;
+}
+
+.anime-image {
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #382064, #171727);
+    overflow: hidden;
+}
+
+.anime-image img {
+    width: 250px;
+    height: 800px;
+    object-fit: contain;
+    display: block;
+}
+.anime-info {
+    padding: 18px;
+}
+
+.anime-info h3 {
+    margin: 0 0 8px;
+    font-size: 21px;
+}
+
+.anime-info p {
+    margin: 0 0 15px;
+    color: #999;
+}
+
+.anime-info button {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 7px;
+    background: #252538;
+    color: white;
+    cursor: pointer;
+}
+
+.anime-info button:hover {
+    background: #7c3aed;
+}
+
+.anime-info button.favorite {
+    background: #5b21b6;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background: #11111b;
+    color: #777;
+}
+
+/* PHONE */
+
+@media (max-width: 800px) {
+
+    .anime-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .anime-grid {
+        grid-template-columns: 1fr;
+    }
+}/* NARUTO EPISODES */
+
+.episodes-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 25px 100px;
+    text-align: center;
+}
+
+.episodes-page h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.episodes-page > p {
+    color: #aaa;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.episodes-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.episode-button {
+    display: block;
+    padding: 18px;
+    background: #151522;
+    border: 1px solid #29293b;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.episode-button:hover {
+    background: #7c3aed;
+    border-color: #7c3aed;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 700px) {
+    .episodes-list {
+        grid-template-columns: 1fr;
+    }
+}
