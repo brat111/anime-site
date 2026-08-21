@@ -1,5 +1,2 @@
 Flask
-gunicornvenv/
-__pycache__/
-*.mp4
-python
+gunicorn
