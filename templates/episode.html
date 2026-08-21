@@ -26,11 +26,15 @@
 
     <h1>Naruto — Епизод {{ episode }}</h1>
 
-    <video class="anime-player" controls>
-        <source
-            src="{{ url_for('static', filename='videos/naruto' ~ episode ~ '.mp4') }}"
-            type="video/mp4">
-    </video>
+    <iframe
+        class="anime-player"
+        src="https://vioo.cc/embed/{{ video_id }}"
+        width="100%"
+        height="500"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+    </iframe>
 
     <a href="/naruto" class="back-button">
         ← Назад към епизодите

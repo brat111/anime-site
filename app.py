@@ -2,6 +2,14 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+VIDEO_IDS = {
+    1: "34sl",
+    2: "",
+    3: "",
+    4: "",
+    5: ""
+}
+
 
 @app.route("/")
 def home():
@@ -15,8 +23,17 @@ def naruto():
 
 @app.route("/naruto/episode/<int:episode>")
 def naruto_episode(episode):
-    return render_template("episode.html", episode=episode)
+    video_id = VIDEO_IDS.get(episode)
+
+    if not video_id:
+        return "Този епизод все още няма видео.", 404
+
+    return render_template(
+        "episode.html",
+        episode=episode,
+        video_id=video_id
+    )
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
